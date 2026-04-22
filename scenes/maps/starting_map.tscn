@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://mn0vivxj7rwj"]
+
+[ext_resource type="Script" uid="uid://dmqt3ibo18kjw" path="res://scripts/maps/starting_map.gd" id="1_dcwyw"]
+[ext_resource type="Script" uid="uid://knfajig65232" path="res://scripts/classes/basic_tower.gd" id="2_cpugr"]
+
+[sub_resource type="Curve2D" id="Curve2D_vrutl"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 65, 59, 0, 0, 0, 0, 281, 63, 0, 0, 0, 0, 297, 65, 0, 0, 0, 0, 308, 84, 0, 0, 0, 0, 407, 177, 0, 0, 0, 0, 408, 199, 0, 0, 0, 0, 293, 284, 0, 0, 0, 0, 270, 313, 0, 0, 0, 0, 277, 358, 0, 0, 0, 0, 287, 380, 0, 0, 0, 0, 379, 415, 0, 0, 0, 0, 402, 405, 0, 0, 0, 0, 421, 374, 0, 0, 0, 0, 609, 279, 0, 0, 0, 0, 814, 192, 0, 0, 0, 0, 850, 182, 0, 0, 0, 0, 876, 195, 0, 0, 0, 0, 932, 360, 0, 0, 0, 0, 1053, 434, 0, 0, 0, 0, 1070, 450, 0, 0, 0, 0, 1072, 478, 0, 0, 0, 0, 1061, 498, 0, 0, 0, 0, 772, 556)
+}
+point_count = 23
+
+[node name="StartingMap" type="Node2D"]
+script = ExtResource("1_dcwyw")
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_vrutl")
+
+[node name="towers" type="Node2D" parent="."]
+
+[node name="BasicTower" type="Node2D" parent="towers"]
+position = Vector2(321, 173)
+script = ExtResource("2_cpugr")
+metadata/_custom_type_script = "uid://knfajig65232"
+
+[node name="projectiles" type="Node2D" parent="."]
