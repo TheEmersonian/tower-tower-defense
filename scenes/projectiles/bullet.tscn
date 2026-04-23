@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bmqfh8m5muyg5"]
+[gd_scene load_steps=4 format=3 uid="uid://bmqfh8m5muyg5"]
 
+[ext_resource type="Script" uid="uid://brvaqv5c6rlxh" path="res://scripts/projectiles/bullet.gd" id="1_48g2p"]
 [ext_resource type="Texture2D" uid="uid://kaodt7up3uas" path="res://assets/images/Beam3.png" id="1_yvfy2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_48g2p"]
@@ -8,6 +9,7 @@ height = 11.5
 
 [node name="Bullet" type="Area2D"]
 collision_layer = 2
+script = ExtResource("1_48g2p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_48g2p")
@@ -15,3 +17,5 @@ shape = SubResource("CapsuleShape2D_48g2p")
 [node name="BulletSprite" type="Sprite2D" parent="."]
 scale = Vector2(0.01, 0.01)
 texture = ExtResource("1_yvfy2")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
