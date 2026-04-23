@@ -28,6 +28,7 @@ class TowerCooldown:
 @export var turret_scale: Vector2
 @export_category("Stats")
 @export var attack_range : float
+@export var projectile_speed : float
 
 var enemies: Array
 

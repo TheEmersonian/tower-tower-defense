@@ -3,19 +3,21 @@ extends Area2D
 
 var damage: float
 var pierce: int
+var speed: float
 var hit_enemies: Array[Enemy]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
 
-func setup(_damage: float, _pierce: int):
+func setup(_damage: float, _pierce: int, _speed: float):
 	damage = _damage
 	pierce = _pierce
+	speed = _speed
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	position += Vector2.from_angle(rotation)
+	position += Vector2.from_angle(rotation) * delta * speed
 	
 
 

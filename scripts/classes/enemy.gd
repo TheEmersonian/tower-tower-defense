@@ -5,6 +5,7 @@ extends Area2D
 var max_health: float
 var health: float
 var speed: float
+var net_worth: float
 
 var pathfollow: PathFollow2D
 
@@ -13,6 +14,8 @@ func set_stats()
 
 @abstract
 func reach_end_of_track()
+
+signal death(net_worth)
 
 func _process(delta: float) -> void:
 	if is_instance_valid(pathfollow):
@@ -28,4 +31,5 @@ func take_damage(damage: float):
 	health -= damage
 	print("Enemy HP: ", health_before, "/", max_health, "->",health,"/",max_health)
 	if health <= 0:
+		emit_signal("death", net_worth)
 		queue_free()
