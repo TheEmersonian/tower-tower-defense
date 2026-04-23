@@ -7,6 +7,8 @@ var basic_tower_turret := preload("res://assets/images/gun.png")
 var bullet_scene := preload("res://scenes/projectiles/bullet.tscn")
 var projectiles_container: Node2D
 
+var DAMAGE := 25.0
+
 func set_stats():
 	base_sprite = basic_tower_base
 	base_scale = Vector2(0.3,0.3)
@@ -32,9 +34,10 @@ func _process(_delta: float) -> void:
 		tower_turret.rotation_degrees += turret_rotation_degrees
 
 func attack():
-	var bullet: Area2D = bullet_scene.instantiate()
+	var bullet: Projectile = bullet_scene.instantiate()
 	bullet.global_position = global_position
 	bullet.rotation_degrees = tower_turret.rotation_degrees - 100
+	bullet.setup(DAMAGE, 1)
 	projectiles_container.add_child(bullet)
 
 

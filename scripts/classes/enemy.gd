@@ -22,3 +22,10 @@ func _process(delta: float) -> void:
 
 func set_path_follow(new_path_follow: PathFollow2D):
 	pathfollow = new_path_follow
+
+func take_damage(damage: float):
+	var health_before := health
+	health -= damage
+	print("Enemy HP: ", health_before, "/", max_health, "->",health,"/",max_health)
+	if health <= 0:
+		queue_free()

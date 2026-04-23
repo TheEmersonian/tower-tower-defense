@@ -1,10 +1,17 @@
+class_name Projectile
 extends Area2D
 
+var damage: float
+var pierce: int
+var hit_enemies: Array[Enemy]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
 
+func setup(_damage: float, _pierce: int):
+	damage = _damage
+	pierce = _pierce
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -13,5 +20,10 @@ func _process(delta: float) -> void:
 
 
 func _on_area_entered(area: Area2D) -> void:
-	print("hit")
-	queue_free()
+	if area.has_method("take_damage"):
+		if hit_enemies.has(area): return
+		area.take_damage(damage)
+		hit_enemies.append(area)
+		pierce -= 1
+		if pierce <= 0:
+			queue_free()
