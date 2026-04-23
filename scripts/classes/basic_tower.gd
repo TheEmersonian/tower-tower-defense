@@ -1,7 +1,7 @@
 class_name BasicTower
 extends Tower
 
-var basic_tower_base := preload("res://assets/images/Homing Blast.png")
+var basic_tower_base := preload("res://assets/images/towers/base/Base-Pierce1.png")
 var basic_tower_turret := preload("res://assets/images/Summoner item 5.png")
 
 var bullet_scene := preload("res://scenes/projectiles/bullet.tscn")
@@ -11,7 +11,7 @@ var DAMAGE := 25.0
 
 func set_stats():
 	base_sprite = basic_tower_base
-	base_scale = Vector2(0.3,0.3)
+	base_scale = Vector2(0.05,0.05)
 	base_rotation_degrees = 0
 	turret_sprite = basic_tower_turret
 	turret_scale = Vector2(1,1)
@@ -38,7 +38,7 @@ func attack():
 	var bullet: Projectile = bullet_scene.instantiate()
 	bullet.global_position = global_position
 	bullet.rotation_degrees = tower_turret.rotation_degrees - turret_rotation_degrees
-	bullet.setup(DAMAGE, 3, projectile_speed)
+	bullet.setup(DAMAGE, 1, projectile_speed)
 	projectiles_container.add_child(bullet)
 
 

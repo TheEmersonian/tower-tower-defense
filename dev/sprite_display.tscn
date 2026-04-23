@@ -1,0 +1,152 @@
+[gd_scene load_steps=17 format=3 uid="uid://b5kjq5b0ho5ld"]
+
+[ext_resource type="Texture2D" uid="uid://bhjdg7k1g5cw4" path="res://assets/images/towers/base/Base.png" id="1_v1u07"]
+[ext_resource type="Texture2D" uid="uid://ba8y721doodge" path="res://assets/images/towers/base/Base-Range1.png" id="2_wc033"]
+[ext_resource type="Texture2D" uid="uid://b6b67pl4jgwoy" path="res://assets/images/towers/base/Base-Range2.png" id="3_3yhrg"]
+[ext_resource type="Texture2D" uid="uid://doc6vsyvlx4l4" path="res://assets/images/towers/base/Base-Range3.png" id="4_lpvwq"]
+[ext_resource type="Texture2D" uid="uid://gird321wf46p" path="res://assets/images/towers/base/Base-Range4.png" id="5_nrbu1"]
+[ext_resource type="Texture2D" uid="uid://wpjxec3ouwyw" path="res://assets/images/towers/base/Base-Range5.png" id="6_icj1k"]
+[ext_resource type="Texture2D" uid="uid://bv6bwhieg6r0y" path="res://assets/images/towers/base/Base-Pierce1.png" id="7_2jqrw"]
+[ext_resource type="Texture2D" uid="uid://dqafl0mv7pwhr" path="res://assets/images/towers/base/Base-Pierce2.png" id="8_bbxrk"]
+[ext_resource type="Texture2D" uid="uid://bciobegjkro63" path="res://assets/images/towers/base/Base-Pierce3.png" id="9_ifder"]
+[ext_resource type="Texture2D" uid="uid://d1avgd38x4vi7" path="res://assets/images/towers/base/Base-Pierce4.png" id="10_0d8nw"]
+[ext_resource type="Texture2D" uid="uid://c405bujkn7qhh" path="res://assets/images/towers/base/Base-Pierce5.png" id="11_g5jxw"]
+[ext_resource type="Texture2D" uid="uid://dwj5o5mpwckhd" path="res://assets/images/towers/base/Base-Turnspeed1.png" id="12_igd52"]
+[ext_resource type="Texture2D" uid="uid://upjxohcfu4gn" path="res://assets/images/towers/base/Base-Turnspeed2.png" id="13_di63x"]
+[ext_resource type="Texture2D" uid="uid://cg44agrmy0bty" path="res://assets/images/towers/base/Base-Turnspeed3.png" id="14_2b0i7"]
+[ext_resource type="Texture2D" uid="uid://btq4rkeilhns6" path="res://assets/images/towers/base/Base-Turnspeed4.png" id="15_byolq"]
+[ext_resource type="Texture2D" uid="uid://dnuubx1faogov" path="res://assets/images/towers/base/Base-Turnspeed5.png" id="16_7vhu8"]
+
+[node name="SpriteDisplay" type="FlowContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+vertical = true
+
+[node name="Base" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("1_v1u07")
+expand_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("2_wc033")
+expand_mode = 5
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("3_3yhrg")
+expand_mode = 5
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("4_lpvwq")
+expand_mode = 5
+
+[node name="TextureRect5" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("5_nrbu1")
+expand_mode = 5
+
+[node name="TextureRect6" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("6_icj1k")
+expand_mode = 5
+
+[node name="Base2" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("1_v1u07")
+expand_mode = 5
+
+[node name="TextureRect7" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("7_2jqrw")
+expand_mode = 5
+
+[node name="TextureRect8" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("8_bbxrk")
+expand_mode = 5
+
+[node name="TextureRect9" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("9_ifder")
+expand_mode = 5
+
+[node name="TextureRect10" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("10_0d8nw")
+expand_mode = 5
+
+[node name="TextureRect11" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("11_g5jxw")
+expand_mode = 5
+
+[node name="Base3" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("1_v1u07")
+expand_mode = 5
+
+[node name="TextureRect14" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("12_igd52")
+expand_mode = 5
+
+[node name="TextureRect15" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("13_di63x")
+expand_mode = 5
+
+[node name="TextureRect16" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("14_2b0i7")
+expand_mode = 5
+
+[node name="TextureRect17" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("15_byolq")
+expand_mode = 5
+
+[node name="TextureRect18" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("16_7vhu8")
+expand_mode = 5

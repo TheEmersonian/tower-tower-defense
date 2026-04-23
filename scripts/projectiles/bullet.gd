@@ -27,5 +27,5 @@ func _on_area_entered(area: Area2D) -> void:
 		area.take_damage(damage)
 		hit_enemies.append(area)
 		pierce -= 1
-		if pierce <= 0:
+		if pierce < 0:
 			queue_free()
